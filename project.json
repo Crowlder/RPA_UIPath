@@ -3,10 +3,13 @@
   "description": "Prueba",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.12.3]",
-    "UiPath.Mail.Activities": "[1.15.2]",
-    "UiPath.System.Activities": "[22.4.4]",
-    "UiPath.UIAutomation.Activities": "[22.4.7]"
+    "UiPath.Bizagi.Activities": "[0.1.6852.24231]",
+    "UiPath.Bonitasoft.Activities": "[0.2.0]",
+    "UiPath.Excel.Activities": "[2.16.0]",
+    "UiPath.Mail.Activities": "[1.18.0]",
+    "UiPath.PDF.Activities": "[3.6.0]",
+    "UiPath.System.Activities": "[22.10.1]",
+    "UiPath.UIAutomation.Activities": "[22.10.1]"
   },
   "webServices": [],
   "entitiesStores": [],
