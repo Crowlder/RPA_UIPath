@@ -658,7 +658,7 @@
           <av:Size x:Key="ShapeSize">200,66</av:Size>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <Sequence DisplayName="Interacción con Navegador" sap:VirtualizedContainerService.HintSize="509,305" sap2010:WorkflowViewState.IdRef="Sequence_17">
+      <Sequence DisplayName="Interacción con Navegador" sap:VirtualizedContainerService.HintSize="509,523" sap2010:WorkflowViewState.IdRef="Sequence_17">
         <Sequence.Variables>
           <Variable x:TypeArguments="ui:Browser" Name="BrowserAbierto" />
         </Sequence.Variables>
@@ -667,25 +667,44 @@
             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
-        <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="467,213" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[BrowserAbierto]" Url="google.com">
+        <ui:OpenBrowser AutomaticallyDownloadWebDriver="{x:Null}" CommunicationMethod="{x:Null}" Hidden="{x:Null}" NewSession="{x:Null}" Private="{x:Null}" BrowserType="Chrome" DisplayName="Open Browser" sap:VirtualizedContainerService.HintSize="467,431" sap2010:WorkflowViewState.IdRef="OpenBrowser_1" UiBrowser="[BrowserAbierto]" Url="google.com">
           <ui:OpenBrowser.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
               </ActivityAction.Argument>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="XAMLCreadosEnElCurso\Autenticar Msmart.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="368,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="XAMLCreadosEnElCurso\Autenticar Msmart.xaml">
-                <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="ui:Browser" x:Key="In_Browser">
-                    <mva:VisualBasicValue x:TypeArguments="ui:Browser" ExpressionText="BrowserAbierto" />
-                  </InArgument>
-                </ui:InvokeWorkflowFile.Arguments>
+              <Sequence sap:VirtualizedContainerService.HintSize="410,330" sap2010:WorkflowViewState.IdRef="Sequence_20">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-              </ui:InvokeWorkflowFile>
+                <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists" sap:VirtualizedContainerService.HintSize="368,86" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
+                  <ui:UiElementExists.Target>
+                    <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Selector="{x:Null}" Id="d7dc75b8-811d-46c5-a57d-fbde4ffb7a4d">
+                      <ui:Target.TimeoutMS>
+                        <InArgument x:TypeArguments="x:Int32" />
+                      </ui:Target.TimeoutMS>
+                      <ui:Target.WaitForReady>
+                        <InArgument x:TypeArguments="ui:WaitForReady" />
+                      </ui:Target.WaitForReady>
+                    </ui:Target>
+                  </ui:UiElementExists.Target>
+                </ui:UiElementExists>
+                <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="XAMLCreadosEnElCurso\Autenticar Msmart.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="368,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="XAMLCreadosEnElCurso\Autenticar Msmart.xaml">
+                  <ui:InvokeWorkflowFile.Arguments>
+                    <InArgument x:TypeArguments="ui:Browser" x:Key="In_Browser">
+                      <mva:VisualBasicValue x:TypeArguments="ui:Browser" ExpressionText="BrowserAbierto" />
+                    </InArgument>
+                  </ui:InvokeWorkflowFile.Arguments>
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                </ui:InvokeWorkflowFile>
+              </Sequence>
             </ActivityAction>
           </ui:OpenBrowser.Body>
         </ui:OpenBrowser>
